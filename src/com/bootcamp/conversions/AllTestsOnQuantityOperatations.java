@@ -100,4 +100,13 @@ public class AllTestsOnQuantityOperatations {
 		;
 		
 	}
+	
+	@Test
+	public void testsConversionOfTemperature(){
+		
+		Celcius temp1 = new Celcius(0);
+		Fahrenheit temp2 = new Fahrenheit(32);
+		
+		assertEquals(temp1,temp2.convert(temp1));
+	}
 }
