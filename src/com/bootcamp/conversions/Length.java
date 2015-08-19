@@ -1,6 +1,6 @@
 package com.bootcamp.conversions;
 
-public abstract class Length implements Quantity {
+public abstract class Length implements AddableQuantity {
 
 	@Override
 	public boolean equals(Object object) {

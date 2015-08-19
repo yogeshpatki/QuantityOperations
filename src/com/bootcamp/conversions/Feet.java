@@ -13,7 +13,8 @@ public class Feet extends Length {
 		return (this.value / ConversionFactor);
 
 	}
-
+	
+	@Override
 	public Feet fromBaseUnit(double value) {
 		return new Feet(value * ConversionFactor);
 

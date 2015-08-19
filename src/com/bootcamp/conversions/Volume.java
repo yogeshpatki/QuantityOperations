@@ -1,6 +1,6 @@
 package com.bootcamp.conversions;
 
-public abstract class Volume implements Quantity {
+public abstract class Volume implements AddableQuantity {
 
 	@Override
 	public boolean equals(Object object) {

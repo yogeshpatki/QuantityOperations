@@ -89,4 +89,15 @@ public class AllTestsOnQuantityOperatations {
 		assertEquals(null, tableSpoon.convert(rod));
 	}
 
+	
+	@Test
+	public void testsEqualityOfTemperatures(){
+		Celcius temp1 = new Celcius(0);
+		Fahrenheit temp2 = new Fahrenheit(32);
+		
+		assertEquals(temp1,temp2);
+		
+		;
+		
+	}
 }
