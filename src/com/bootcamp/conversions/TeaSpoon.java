@@ -1,10 +1,10 @@
 package com.bootcamp.conversions;
 
-public class Meter extends Length {
+public class TeaSpoon extends Volume {
 	double value;
 	public static final double ConversionFactor = 1d;
 
-	public Meter(double value) {
+	public TeaSpoon(double value) {
 		this.value = value;
 	}
 
@@ -15,8 +15,8 @@ public class Meter extends Length {
 	}
 
 	@Override
-	public Meter fromBaseUnit(double value) {
-		return new Meter(value * ConversionFactor);
+	public TeaSpoon fromBaseUnit(double value) {
+		return new TeaSpoon(value * ConversionFactor);
 
 	}
 

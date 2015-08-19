@@ -1,16 +1,12 @@
 package com.bootcamp.conversions;
 
-public abstract class Length {
-
-	public abstract double toBaseUnit();
-
-	public abstract Length fromBaseUnit(double value);
+public abstract class Length implements Quantity {
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object object) {
 		double precision = 0.001;
-		if (obj instanceof Length) {
-			Length len = (Length) obj;
+		if (object instanceof Length) {
+			Length len = (Length) object;
 
 			if (Math.abs(this.toBaseUnit() - len.toBaseUnit()) < precision) {
 				return true;
@@ -21,6 +17,22 @@ public abstract class Length {
 			return false;
 		}
 
+	}
+
+	@Override
+	public Quantity add(Quantity length) {
+		if (length instanceof Length) {
+			return this.fromBaseUnit(length.toBaseUnit() + this.toBaseUnit());
+		} else
+			return null;
+	}
+
+	@Override
+	public Quantity convert(Quantity length) {
+		if (length instanceof Length)
+			return fromBaseUnit(length.toBaseUnit());
+		else
+			return null;
 	}
 
 }
