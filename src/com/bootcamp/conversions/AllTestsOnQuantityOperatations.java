@@ -107,6 +107,6 @@ public class AllTestsOnQuantityOperatations {
 		Celcius temp1 = new Celcius(0);
 		Fahrenheit temp2 = new Fahrenheit(32);
 		
-		assertEquals(temp1,temp2.convert(temp1));
+		assertEquals(temp1,temp1.convert(temp2));
 	}
 }
